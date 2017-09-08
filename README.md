@@ -3,14 +3,14 @@ Cold starts
 
 Cold starts happen in cases such as your app’s being launched for the first time since the device booted, or since the system killed the app.This type of start presents the greatest challenge in terms of minimizing startup time, because the system and app have more work to do than in the other launch states.
 
-####themes.xml
+**themes.xml**
 ```
 <style name="AppTheme.ColdStart">
         <item name="android:windowBackground">@drawable/splash_bg</item>
 </style>
 ```
 
-####splash_bg.xml
+**splash_bg.xml**
 ```
 <layer-list
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -41,7 +41,7 @@ If you have create two flavors, called free and promo, and two build types calle
 * `paidDebug`
 * `paidRelease`
 
-####Working with flavors:
+**Working with flavors:**
 ```
 productFlavors {
         free {}
@@ -50,7 +50,7 @@ productFlavors {
     }
 ```
 
-####variants.gradle with the different properties of each flavor:
+**variants.gradle with the different properties of each flavor:**
 ```
 ext {
 
@@ -80,7 +80,7 @@ ext {
 }    
 ```
 
-####build.gradle
+**build.gradle**
 ```
 productFlavors.whenObjectAdded {
         flavor ->
